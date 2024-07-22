@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# AI-Powered Chat Application with Speech Recognition
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is an innovative chat application that integrates artificial intelligence, speech recognition, and text-to-speech capabilities. It allows users to have a voice-based conversation with an AI model, creating a unique and interactive experience.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Real-time voice-based conversation with an AI model
+- Speech-to-text conversion for user input
+- Text-to-speech conversion for AI responses
+- Dynamic conversation flow with turn-taking between user and AI
+- Customizable system prompts to set the context of the conversation
+- Responsive web interface built with React and Material-UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Frontend:
+  - React.js
+  - Material-UI
+  - Socket.io-client
+  - Web Speech API
+- Backend:
+  - Node.js
+  - Express.js
+  - Socket.io
+  - OpenRouter API for AI model integration
+  - Google Cloud Text-to-Speech API
 
-### `npm test`
+## Setup and Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/kjb135-coe/interview-app.git
+   cd interview-app
+   ```
 
-### `npm run build`
+2. Install dependencies for both frontend and backend:
+   ```
+   cd client && npm install
+   cd ../server && npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Set up environment variables:
+   Create a `.env` file in the server directory with the following variables:
+   ```
+   PORT=8080
+   OPENROUTER_API_KEY=your_openrouter_api_key
+   GOOGLE_APPLICATION_CREDENTIALS=path_to_your_google_cloud_credentials.json
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the backend server:
+   ```
+   cd server && npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. In a new terminal, start the frontend application:
+   ```
+   cd client && npm start
+   ```
 
-### `npm run eject`
+6. Open your browser and navigate to `http://localhost:3000` to use the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Enter a system prompt in the text field to set the context for the AI (e.g., "You are a helpful assistant").
+2. Click "Start Conversation" to begin the interaction.
+3. Speak into your microphone when prompted. The application will convert your speech to text.
+4. Wait for the AI to process your input and generate a response.
+5. Listen to the AI's response, which will be played back as audio.
+6. Continue the conversation by speaking again when it's your turn.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `client/`: Contains the React frontend application
+  - `src/App.js`: Main component with core logic
+- `server/`: Contains the Node.js backend
+  - `server.js`: Express server setup and Socket.io logic
 
-## Learn More
+## Future Enhancements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Implement user authentication
+- Add support for multiple languages
+- Improve error handling and edge cases
+- Optimize for mobile devices
+- Implement conversation history saving
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- OpenRouter for providing access to various AI models
+- Google Cloud for the Text-to-Speech API
+- The open-source community for the amazing tools and libraries used in this project
